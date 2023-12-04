@@ -1,28 +1,26 @@
-# autoamting_full_tests
+# Автоматизированные тесты
+Данный workflow позволяет тестировать ваши классы сразу на разных тестах и записывать результат в ```test_output.txt```
+Тест на которых тестируются классы добавляются в этот репозиторий.
 
-Создать папку, где будут лежать тесты, которые добавляются разными людьми
-например
-```
-.github/workflows
-rational_tests/
-  CMakeLists.txt
-  test_by_rdinit.cpp
-  test_by_username.cpp
-  test_....cpp
-dynarray_tests/
-  CMakeLists.txt
-  test_by_rdinit.cpp
-  test_by_username.cpp
-  test_....cpp
-prj.lab/
-  rational/
-    CMakeLists.txt
-    files...
-  dynarray/
-    CMakeLists.txt
-    files...
-CMakeLists.txt
-run_tests.sh
-```
+Чтобы класс можно было протестировать, библиотеки должны называться ```dynarray``` и ```rational ```
 
-При запуске в репозитории копирует prj.lab в свою папку и прогоняет тесты, генерирует tests_status.md
+## Инструкция по подключению:
+В своем репозитории создать файл: ```.github/workflows/tests.yml```
+Содержимое файла:
+```yaml
+name: test_running
+
+on:
+  - workflow_dispatch
+  - push
+
+permissions:
+  contents: write
+
+jobs:
+  run_tests_workflow:
+    uses: rdinit/autoamting_full_tests/.github/workflows/run_tests.yaml@v1
+```
+Тесты будут запускаться при пуше изенений в репозиторий, но можно будет запускать выполнение вручную во вкладке Actions репозитория.
+Подробнее можно почитать тут: https://docs.github.com/en/actions/using-workflows/triggering-a-workflow
+
