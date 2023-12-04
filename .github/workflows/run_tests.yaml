@@ -11,8 +11,8 @@ jobs:
     - name: Checkout this repo
       uses: actions/checkout@v3
       with:
-        repository: rdinit/autoamting_full_tests
-        path: ./autoamting_full_tests
+        repository: rdinit/automating_full_tests
+        path: ./automating_full_tests
 
     - uses: actions/setup-python@v4
       with:
@@ -20,8 +20,8 @@ jobs:
 
     - name: build
       run: |
-        cp prj.lab autoamting_full_tests/prj.lab -r
-        cd autoamting_full_tests
+        cp prj.lab automating_full_tests/prj.lab -r
+        cd automating_full_tests
         cmake  --build .
 
     - name: execute py script # run main.py
@@ -30,8 +30,8 @@ jobs:
     - name: commit
      run: |
           cd .
-          cp autoamting_full_tests/test_output.txt test_output.txt
-          rm -r ./autoamting_full_tests
+          cp automating_full_tests/test_output.txt test_output.txt
+          rm -r ./automating_full_tests
           git config user.name rdinit
           git config user.email 28570294+rdinit@users.noreply.github.com
           git add .
