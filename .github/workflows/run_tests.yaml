@@ -2,7 +2,7 @@ on:
   workflow_call
 
 jobs:
-  tuntests:
+  run_tests:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
