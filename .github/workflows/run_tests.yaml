@@ -24,9 +24,7 @@ jobs:
         cd automating_full_tests
         cmake build .
         cmake --build .
-
-    - name: execute py script # run main.py
-      run: python3 run_tests.py      
+        python3 run_tests.py      
 
     - name: commit
       run: |
