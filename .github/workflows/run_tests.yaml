@@ -22,7 +22,8 @@ jobs:
       run: |
         cp prj.lab automating_full_tests/prj.lab -r
         cd automating_full_tests
-        cmake  --build .
+        cmake build .
+        cmake --build .
 
     - name: execute py script # run main.py
       run: python3 run_tests.py      
