@@ -1,2 +1,2 @@
-add_executable(rdinit rdinit.cpp)
-target_link_libraries(rdinit dynarray)
+add_executable(dynarray_rdinit rdinit.cpp)
+target_link_libraries(dynarray_rdinit dynarray)
