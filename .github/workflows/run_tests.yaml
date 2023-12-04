@@ -28,7 +28,7 @@ jobs:
       run: python3 run_tests.py      
 
     - name: commit
-     run: |
+      run: |
           cd .
           cp automating_full_tests/test_output.txt test_output.txt
           rm -r ./automating_full_tests
