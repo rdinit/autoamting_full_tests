@@ -12,3 +12,4 @@ _deps
 
 prj.lab/*
 bin
+test_output.txt

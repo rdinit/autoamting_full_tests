@@ -5,8 +5,8 @@ def run_in_directory(start_dir):
     start_dir += '/bin'
     texts = []
     for file in os.listdir(start_dir):
-        texts.append('\TESTS ' + start_dir + '/' + file)
-        texts.append(subprocess.Popen([start_dir + '/' + file], stdout=subprocess.PIPE).communicate()[0])
+        texts.append('\nTESTS ' + start_dir + '/' + file)
+        texts.append(subprocess.Popen([start_dir + '/' + file], stdout=subprocess.PIPE).communicate()[0].decode("utf-8") )
     return texts.copy()
 
 
