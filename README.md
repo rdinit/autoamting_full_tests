@@ -5,6 +5,7 @@
 ```
 .github/workflows
 rational_tests/
+  CMakeLists.txt
   test_by_rdinit.cpp
   test_by_username.cpp
   test_....cpp
@@ -20,6 +21,7 @@ prj.lab/
   dynarray/
     CMakeLists.txt
     files...
+CMakeLists.txt
 run_tests.sh
 ```
 

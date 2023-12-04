@@ -1,0 +1,39 @@
+on:
+  workflow_call
+
+jobs:
+  generate-table:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Checkout this repo
+      uses: actions/checkout@v3
+      with:
+        repository: rdinit/autoamting_full_tests
+        path: ./autoamting_full_tests
+
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10' 
+
+    - name: build
+      run: |
+        cp prj.lab autoamting_full_tests/prj.lab -r
+        cd autoamting_full_tests
+        cmake  --build .
+
+    - name: execute py script # run main.py
+      run: python3 run_tests      
+
+    - name: commit
+     run: |
+          cd .
+          cp autoamting_full_tests/test_output.txt test_output.txt
+          rm -r ./autoamting_full_tests
+          git config user.name rdinit
+          git config user.email 28570294+rdinit@users.noreply.github.com
+          git add .
+          git commit -m "generated tests logs"
+          git push

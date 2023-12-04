@@ -1,0 +1,23 @@
+on:
+  pull_request
+
+jobs:
+  generate-table:
+    build-for-linux:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10' 
+    - name: run
+      run: |
+          python3 generate_cmakelists.py
+
+    - name: commit
+      run: |
+          git config user.name rdinit
+          git config user.email 28570294+rdinit@users.noreply.github.com
+          git add .
+          git commit -m "generated cmakelists"
+          git push
