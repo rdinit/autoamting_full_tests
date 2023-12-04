@@ -2,7 +2,7 @@ on:
   workflow_call
 
 jobs:
-  generate-table:
+  tuntests:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
@@ -25,7 +25,7 @@ jobs:
         cmake  --build .
 
     - name: execute py script # run main.py
-      run: python3 run_tests      
+      run: python3 run_tests.py      
 
     - name: commit
      run: |
