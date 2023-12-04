@@ -11,3 +11,4 @@ def run_in_directory(start_dir):
         f.write('\n'.join(executables + links))
 
 run_in_directory('rational_tests')
+run_in_directory('dynarray_tests')
