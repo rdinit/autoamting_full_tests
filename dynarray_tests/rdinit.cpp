@@ -4,8 +4,8 @@
 #include "doctest.h"
 
 TEST_CASE("check") {
-  DynArray da(4);
+  DynArr da(4);
   //sstd::cout << da.size() << std::endl;
-  CHECK(da.size() == 4);
+  CHECK(da.Size() == 4);
 
 };
