@@ -21,7 +21,7 @@ permissions:
 
 jobs:
   run_tests_workflow:
-    uses: rdinit/autoamting_full_tests/.github/workflows/run_tests.yaml@v1
+    uses: rdinit/autoamting_full_tests/.github/workflows/run_tests.yaml@main
 ```
 Тесты будут запускаться при пуше изенений в репозиторий, но можно будет запускать выполнение вручную во вкладке Actions репозитория.
 Подробнее можно почитать тут: https://docs.github.com/en/actions/using-workflows/triggering-a-workflow
