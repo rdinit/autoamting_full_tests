@@ -12,7 +12,7 @@ def run_in_directory(start_dir):
 
 res = []
 res += run_in_directory('rational_tests')
-res += run_in_directory('dynarray_tests')
+res += run_in_directory('dynarr_tests')
 
 with open('test_output.txt', 'w') as f:
     f.write('\n'.join(res))

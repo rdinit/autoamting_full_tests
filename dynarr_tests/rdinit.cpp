@@ -1,4 +1,4 @@
-#include <dynarray/dynarray.hpp>
+#include <dynarr/dynarr.hpp>
 #include <iostream>
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"

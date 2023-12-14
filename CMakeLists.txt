@@ -11,6 +11,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG bin.dbg)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE bin.rel)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO bin.relwithdbg)
 
-add_subdirectory(dynarray_tests)
+add_subdirectory(dynarr_tests)
 add_subdirectory(rational_tests)
 add_subdirectory(prj.lab)
