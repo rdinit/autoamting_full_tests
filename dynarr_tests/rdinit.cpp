@@ -35,6 +35,7 @@ TEST_CASE("check") {
   CHECK_EQ(da2[2], da[2]);
   CHECK_FALSE(&da2[2] == &da[2]);
   CHECK_THROWS(da.Resize(-1));
+  CHECK_THROWS(da.Resize(0));
   CHECK_THROWS(DynArr(-1));
 };
 
