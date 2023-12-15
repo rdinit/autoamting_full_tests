@@ -13,3 +13,4 @@ def run_in_directory(start_dir):
 
 run_in_directory('rational_tests')
 run_in_directory('dynarr_tests')
+run_in_directory('complex_tests')

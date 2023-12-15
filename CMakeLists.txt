@@ -13,4 +13,5 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO bin.relwithdbg)
 
 add_subdirectory(dynarr_tests)
 add_subdirectory(rational_tests)
+add_subdirectory(complex_tests)
 add_subdirectory(prj.lab)

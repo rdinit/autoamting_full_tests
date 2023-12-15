@@ -11,6 +11,7 @@ def run_in_directory(start_dir):
 
 
 res = []
+res += run_in_directory('complex_tests')
 res += run_in_directory('rational_tests')
 res += run_in_directory('dynarr_tests')
 
