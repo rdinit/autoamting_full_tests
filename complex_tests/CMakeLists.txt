@@ -1,0 +1,2 @@
+add_executable(complex_rdinit rdinit.cpp)
+target_link_libraries(complex_rdinit complex)
