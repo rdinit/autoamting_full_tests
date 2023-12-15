@@ -48,6 +48,12 @@ void testMethods() {
   total_tests_counter += 1;
 
   ostr.str("");
+  Complex t(3,4);
+  ostr << t.re << " " << t.im;
+  correct_counter += printTestLog(ostr.str(), "3 4", "complex.re complex.im");
+  total_tests_counter += 1;
+
+  ostr.str("");
   ostr << Complex(4);
   correct_counter += printTestLog(ostr.str(), "{4, 0}", "complex <- 4");
   total_tests_counter += 1;
