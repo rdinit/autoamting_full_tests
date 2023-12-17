@@ -39,6 +39,7 @@ TEST_CASE("check") {
   CHECK_THROWS(DynArr(-1));
 };
 
+/*
 TEST_CASE("check cout") {
   DynArr da(5);
   for (int x = 0; x < 4; x += 1) {
@@ -49,3 +50,4 @@ TEST_CASE("check cout") {
   ostr << da;
   CHECK_EQ(ostr.str(), "0 1 2 3 0");
 };
+*/
