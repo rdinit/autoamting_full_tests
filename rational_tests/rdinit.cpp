@@ -81,12 +81,12 @@ TEST_CASE("IO") {
   CHECK_NE(istream.failbit, std::ios_base::failbit);
   CHECK(reading == r23);
 
-  istream.str("2/3 ");
+  istream.str("2/3");
   istream >> reading;
   CHECK_NE(istream.failbit, std::ios_base::failbit);
   CHECK(reading == r23);
 
-  istream.str("2/ 3 ");
+  istream.str("2/ 3");
   istream >> reading;
   CHECK_NE(istream.failbit, std::ios_base::failbit);
   CHECK(reading == r23);
