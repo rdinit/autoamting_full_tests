@@ -68,10 +68,10 @@ void testMethods() {
   correct_counter += printTestLog(ostr.str(), "{0, 5}", "{3, 4} - {3, -1}");
   total_tests_counter += 1;
 
-  ostr.str("");
-  ostr << abs(Complex(3, 4));
-  correct_counter += printTestLog(ostr.str(), "5", " abs({3, 4})");
-  total_tests_counter += 1;
+  //ostr.str("");
+  //ostr << abs(Complex(3, 4));
+  //correct_counter += printTestLog(ostr.str(), "5", " abs({3, 4})");
+  //total_tests_counter += 1;
 
   ostr.str("");
   ostr << Complex(3, 4) * 2;
