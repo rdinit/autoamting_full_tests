@@ -4,6 +4,7 @@
 #include <sstream>
 
 #include "doctest.h"
+#include "doctest.h"
 
 void testing() {
   Rational r(int64_t(3));
@@ -73,6 +74,28 @@ TEST_CASE("IO") {
   std::istringstream istream("2/3");
   Rational reading;
   Rational r23(2, 3);
+
+  istream >> reading;
+<<<<<<< HEAD
+  CHECK_FALSE(istream.fail());
+  CHECK(reading.num() == 2);
+  CHECK(reading.den() == 3);
+=======
+  CHECK(reading == r23);
+  istream.str("2/ 3");
+  istream >> reading;
+  CHECK_NE(istream.failbit, std::ios_base::failbit);
+  CHECK(reading == r23);
+
+  istream.str("2/3");
+  istream >> reading;
+  CHECK_NE(istream.failbit, std::ios_base::failbit);
+  CHECK(reading == r23);
+
+  istream.str("2/ 3");
+  istream >> reading;
+  CHECK_NE(istream.failbit, std::ios_base::failbit);
+  CHECK(reading == r23);
 
   istream >> reading;
   CHECK_FALSE(istream.fail());
